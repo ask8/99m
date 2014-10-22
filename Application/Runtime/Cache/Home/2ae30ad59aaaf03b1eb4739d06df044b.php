@@ -1,0 +1,1 @@
+<?php if (!defined('THINK_PATH')) exit();?>恭喜你登录成功
