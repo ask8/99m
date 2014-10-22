@@ -23,7 +23,7 @@
 			</form>
 			<p></p>
 			<div class="alert alert-info" role="alert">
-				<p id="notice">请输入用户名密码</p>
+				<p id="notice">请输入用户名和密码</p>
 			</div>
 		</div>
 		
