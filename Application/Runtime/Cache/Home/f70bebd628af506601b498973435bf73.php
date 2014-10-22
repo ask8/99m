@@ -1,1 +1,0 @@
-<?php if (!defined('THINK_PATH')) exit();?>这里是注册页面

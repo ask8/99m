@@ -1,1 +1,0 @@
-<?php if (!defined('THINK_PATH')) exit();?>4~20位的英文，要下划线减号

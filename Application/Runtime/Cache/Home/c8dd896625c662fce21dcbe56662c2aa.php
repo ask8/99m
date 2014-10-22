@@ -1,1 +1,0 @@
-<?php if (!defined('THINK_PATH')) exit();?>改用户已经被注册，请另外选择用户名
