@@ -1,0 +1,102 @@
+@charset "utf-8";
+/*
+Template Name: 99m
+Version: 1.0.1
+Author: pangzimin
+Author QQ: 26983075
+*/
+
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td {margin:0;padding:0;border:none;list-style-type:none;color:#333333;}
+body{background:#fff ; font:12px/1.5 Arial,Verdana,"宋体"; line-height:150%;}
+table {border-collapse:collapse;border-spacing:0;} 
+fieldset,img {border:0} 
+address,caption,cite,code,dfn,em,strong,th,var {font-style:normal;font-weight:normal} 
+ol,ul {list-style:none} 
+caption,th {text-align:left} 
+h1,h2,h3,h4,h5,h6 {font-size:100%;font-weight:normal} 
+q:before,q:after {content:''} 
+abbr,acronym { border:0}
+a {color: #333; text-decoration: none;}
+a:hover {color: #cc0000; text-decoration: none;}
+textarea{resize:none;}
+.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+.clearfix{display:inline-table}
+*html .clearfix{height:1%}
+.clearfix{display:block;}
+*+html .clearfix{min-height:1%}
+
+.login_header{ height:103px; width:100%; background:url(../img/login_hdbg.jpg) repeat-x;}
+.login_header .head_c{ width:980px; height:103px; margin:0 auto;}
+.login_header .head_c img{ margin:16px 0 0 12px;  float:left;}
+.login_header .head_c span{ color:#774d4d; font-size:18px; line-height:100px; display:inline-block; float:right;}
+.login_header .head_c b{ font-size:24px;}
+
+.login_wrap{ width:980px; margin:0 auto; height:560px;}
+.login_wrap .login_wrapL{ width:580px; float:left; background:#eee; position:relative;}
+.login_wrap .login_wrapL i{ width:680px; height:518px; background:url(../images/user/login_L.jpg) no-repeat; display:inline-block; position:absolute; top:0; left:-100px;}
+.login_wrap .login_wrapR{ width:400px; float:right;}
+.login_wrap .login_wrapR .titler{ height:24px; display:inline-block; padding:44px 0 0 5px; color:#333333; font-family:'微软雅黑'; font-size:16px;}
+.login_wrap .login_wrapR .loginbox{ width:356px; _overflow:hidden; height:420px; padding:24px 0 0 42px; border:1px solid #d1d1d1; border-top:3px solid #333333; position:relative;}
+.login_wrap .login_wrapR .loginbox.registerbox{ width:396px; height:412px; padding:28px 0 0 2px;}
+.login_wrap .login_wrapR .loginbox .bjL,.bjR{ width:120px; height:160px; background:url(../images/user/loginboxjb.png) no-repeat 0 0; display:inline-block; position:absolute; bottom:-11px; left:-10px; z-index:99;}
+.login_wrap .login_wrapR .loginbox .bjR{ left:289px; bottom:-10px; background-position:0 -177px;}
+.login_wrap .login_wrapR .loginbox .userAccount,.userpw{ width:302px; height:34px; height:26px\9; padding-top:8px\9; font-size:14px; color:#686767; border:1px solid #cfcfcf;box-shadow:inset 0 1px 10px rgba(125,125,125,.35);-moz-box-shadow:inset 0 1px 10px rgba(125,125,125,.35);-webkit-box-shadow:inset 0 1px 10px rgba(125,125,125,.25);}
+.login_wrap .login_wrapR .loginbox .userAccount.reuser,.userpw.repw{width:280px;}
+.login_wrap .login_wrapR .loginbox p{ display:block;}
+.login_wrap .login_wrapR .loginbox .error{ height:22px; line-height:22px; color:#ff3333;}
+.login_wrap .login_wrapR .loginbox .error i{ font-style:normal; color:#ff3333;}
+.login_wrap .login_wrapR .loginbox #userpwTip b{ height:13px; overflow:hidden; width:104px; float:right; display:none; margin:6px 30px 0 0; background:url(../images/user/pwdstrength.gif) no-repeat;}
+.login_wrap .login_wrapR .loginbox #userpwTip b.strength2{ background-position:0 -13px;}
+.login_wrap .login_wrapR .loginbox #userpwTip b.strength3{ background-position:0 -26px;}
+.login_wrap .login_wrapR .loginbox .error.reerror{ padding-left:84px; margin:2px 0;}
+.login_wrap .login_wrapR .loginbox .usertext{ position:relative;}
+.login_wrap .login_wrapR .loginbox .usertext .userico,.userpwico,.reuserpwico{ position:absolute; top:9px; right:62px; width:19px; height:19px; background:url(../images/user/loginhzspr.png) no-repeat 0 -83px; display:inline-block;}
+.login_wrap .login_wrapR .loginbox .usertext .userico.regico,.userpwico.regico,.reuserpwico.regico{ right:42px;}
+.login_wrap .login_wrapR .loginbox .usertext .userpwico,.reuserpwico{ background-position:0 -104px;}
+.login_wrap .login_wrapR .loginbox .usertext .userpwico.active,.reuserpwico.active{ background-position:0 -126px;}
+.login_wrap .login_wrapR .loginbox .usertext .userpwico.ok,.reuserpwico.ok{ background-position:0 -148px;}
+.login_wrap .login_wrapR .loginbox .usertext .userico.active{ background-position:0 -63px;}
+.login_wrap .login_wrapR .loginbox .usertext .userico.ok{ background-position:0 -148px;}
+.login_wrap .login_wrapR .loginbox .lcaptcha{ width:82px; height:30px; height:24px\9; padding-top:6px\9; margin-top:2px; border:1px solid #ababad; display:inline-block; float:left;}
+.login_wrap .login_wrapR .loginbox .userAccount:hover,.userpw:hover,.lcaptcha:hover{ border:1px solid #666666;-webkit-box-shadow:0 0 4px rgba(34,34,34,.5);box-shadow:0 0 4px rgba(34,34,34,.5);}
+.login_wrap .login_wrapR .loginbox p span,img{ float:left;}
+.login_wrap .login_wrapR .loginbox .automaticwrap{ height:48px; width:100%; line-height:48px;}
+.login_wrap .login_wrapR .loginbox .automaticwrap.reautomatic{ padding-left:84px; margin:20px 0; display:block; *margin:15px 0;}
+.login_wrap .login_wrapR .loginbox .automaticwrap a{ color:#003399; text-decoration:underline; position:relative; *top:3px; z-index:100; }
+.login_wrap .login_wrapR .loginbox .automaticwrap label{display:block;float:left;height:48px; width:auto; position:relative; _top:14px; z-index:100;}
+.login_wrap .login_wrapR .loginbox .automaticwrap label i{ margin:0 0 0 6px; font-style:normal; }
+.login_wrap .login_wrapR .loginbox .automaticwrap label input{ position:relative; top:2px;}
+.login_wrap .login_wrapR .loginbox .loginbtn{ width:130px; height:48px; padding-bottom: 7px; background:url(../images/user/usersp.png) no-repeat; color:#fff; font-family:'微软雅黑'; font-size:22px; cursor:pointer; _position:relative; _top:6px; outline:none;}
+.login_wrap .login_wrapR .loginbox .loginbtn.registe{ *position:relative; *top:10px;}
+.login_wrap .login_wrapR .loginbox .registerbtn{ font-size:14px; color:#990000; font-weight:bold; margin-left:20px;}
+.login_wrap .login_wrapR .loginbox .reloginbtn{ margin-left:16px; z-index:100; position:relative;}
+.login_wrap .login_wrapR .loginbox .reloginbtn b{ font-size:14px; color:#990000;}
+.login_wrap .login_wrapR .loginbox .yzm{ width:92px; height:34px; margin:0 18px; border:1px solid #eaeaea;}
+.login_wrap .login_wrapR .loginbox .yzm.reyzm{ margin:0 10px;}
+.login_wrap .login_wrapR .loginbox .yzm_a{ line-height:34px;}
+.login_wrap .login_wrapR .loginbox .yzm_a a{ color:#990000;}
+.login_wrap .login_wrapR .loginbox .logincooperation{ margin-top:18px; z-index:100; position:relative;}
+.login_wrap .login_wrapR .loginbox .logincooperation p{ line-height:40px; *height:40px;}
+.login_wrap .login_wrapR .loginbox .logincooperation a{ height:20px; display:inline-block; background:url(../images/user/loginhzspr.png) no-repeat; border:1px solid #e4e4e4; margin-left:2px;}
+.login_wrap .login_wrapR .loginbox .logincooperation .qq{ width:80px;}
+.login_wrap .login_wrapR .loginbox .logincooperation .zfb{ width:98px; background-position:0 -21px;}
+.login_wrap .login_wrapR .loginbox .logincooperation .xlwb{ width:87px; background-position:0 -42px;}
+.login_wrap .login_wrapR .loginbox .submitwrap{ padding-left:76px;}
+.login_wrap .login_wrapR .loginbox .checkphone{ width:94px; height:34px; background:#F4F4F4; border:1px solid #DDDDDD; margin-left:15px; text-align:center; line-height:34px; display:inline-block;}
+.login_wrap .login_wrapR .loginbox .checkphone span{ width:94px; cursor:pointer;}
+
+.login_wrap .login_wrapR .loginbox .rtit{ text-align:right; line-height:34px; width:56px; margin:0 8px 0 20px;}
+
+.footwrap{ width:980px; margin:0 auto; height:132px;}
+.footwrap p{ text-align:center;}
+.footwrap .fti{ width:97px; height:29px; background:url(../img/wmttps.png) no-repeat; display:inline-block;}
+.footwrap .ft_bot{ text-align:center; margin-top:12px;}
+.footwrap .ft_bot a{ margin-right:5px;}
+.footwrap .fti.fti_a{ width:128px; height:47px; background-position:0 -66px;}
+.footwrap .fti.fti_b{ width:128px; height:47px; background-position:0 -117px;}
+.footwrap .fti.fti_c{ width:126px; height:45px; background-position:0 -169px;}
+.footwrap .fti.fti_d{ width:128px; height:47px; background-position:0 -217px;}
+.footwrap .fti.fti_e{ width:126px; height:45px; background-position:0 -268px;}
+
+#zcejzNo{background:#fff;border:1px #e8e8e8 solid;color:#dadada; display:none; height:42px; line-height:42px; text-align:center; padding-bottom:0;}
+
