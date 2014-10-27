@@ -12,7 +12,7 @@
 
 
 <div class="container">
-	<ul class="breadcrumb">
+	<ul class="breadcrumb"> 
 				<li> <a href="{:U('/')}">主页</a> </li> 
 				<li> 注册 <span class="divider"> </li> 
 	</ul>
@@ -46,29 +46,14 @@
 <script>
 $(function(){
 	$('#btn').click(function  () {
-		//alert($('#username').val());
 		$uname= $('#username').val();
 		$upwd= $('#userpwd').val();
 		$upwd2= $('#userpwd2').val();
 		$action=$('#653596352').attr('action');
-		//console.log($uname);
-		//console.log($upwd);
-		//console.log($upwd2);
-		//console.log($action);
+
 		$.post($action,{username:$uname, userpwd:$upwd, userpwd2:$upwd2},function(data){
 			console.log(data);
 			$('#notice2').html(data.info);
-			//if (data.status==0) {$('#notice').show();
-			//	console.log('testing');
-				//$('#notice').attr('class','alert alert-warning');
-
-				//$('#notice').removeClass();
-				//$('#notice').addClass('alert alert-warning');
-				//$('#notice').attr('style','display:visible');
-				//$('#notice').className='alert alert-warning alert-dismissible';
-				//$('#notice').setAttribute("className","alert alert-warning");
-			//}else{
-			//	$('#notice2').html(data.info);
 			}
 			);
 		//return false;

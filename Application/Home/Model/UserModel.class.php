@@ -3,36 +3,27 @@ namespace Home\Model;
 use Think\Model;
 class UserModel extends Model {
 
+    protected $_validate = array(
+        array('uname',"/^[\d\w]{4,20}$/",'用户名必须是4~20位的英文'), // 在新增的时候验证name字段是否唯一
+        array('upwd',"/^([\w\d]{8,10})$/",'密码必须8～10位'),
+    );
     public function register($data)
     {
-     		if (($data['userpwd'] != $data['userpwd2'] )|| ''==$data['userpwd'] ) {
-                $info = array('status' =>0,'info'=>'两次密码不一致,或者为空',);
-    			return $info;
-    		}
-    		if(!preg_match("/^[a-zA-Z_-]{4,20}$/", $data['username'])){
-                $info = array('status' =>0,'info'=>'4~20位的英文，下划线或者减号');
-                return $info;
-    		}
-
-            $isregistered=(count($this->where("uname='".$data['username']."'")->select())>0);
-            if ($isregistered) {
-                $info = array('status' =>0,'info'=>'改用户已经被注册，请另外选择用户名');
-                return $info;
-            }
-    		//dump($_SERVER);
-
     		$data_arr['uname']=$data['username'];
     		$data_arr['upwd']=$data['userpwd'];
     		$data_arr['ip']= $_SERVER['REMOTE_ADDR'];
     		$data_arr['last_time']= time();
-
-    		if(M('user')->add($data_arr)>0){
+            
+            if (!$this->create($data_arr,1)){
+                //exit($this->getError());
+                $info = array('status' =>0,'info'=>$this->getError());
+                return $info;
+            }else{
                 $info = array('status' =>1,'info'=>'注册成功');
                 return $info;
-    		}else{
-                $info = array('status' =>0,'info'=>'注册失败，原因未知');
-                return $info;
-    		}
+            }
+
+
     }
 
     public function about($data)
